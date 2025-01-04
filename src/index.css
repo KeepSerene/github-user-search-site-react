@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+:root {
+  /* Font */
+  --ff: "Space Mono", serif;
+
+  /* Typography */
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  /* Colors: HSL values */
+  /* Primary colors */
+  --primary-blue: 212 100% 50%;
+
+  /* Light theme */
+  --light-bg-primary: 0 0% 94%; /* Light gray */
+  --light-bg-secondary: 0 0% 100%; /* White */
+  --light-bg-accent: 227 100% 93%; /* Soft blue */
+  --light-text-primary: 217 21% 21%; /* Navy blue */
+  --light-text-secondary: 217 35% 45%; /* Muted blue */
+
+  /* Dark theme */
+  --dark-bg-primary: 220 40% 13%; /* Deep black */
+  --dark-bg-secondary: 222 41% 20%; /* Charcoal gray */
+  --dark-bg-accent: 222 25% 27%; /* Dark slate gray */
+  --dark-text-primary: 0 0% 100%; /* Bright white */
+  --dark-text-secondary: 217 20% 51%; /* Cool gray */
+}
+
+[data-theme="dark"] {
+  --bg-primary: var(--dark-bg-primary);
+  --bg-secondary: var(--dark-bg-secondary);
+  --text-primary: var(--dark-text-primary);
+  --text-secondary: var(--dark-text-secondary);
+  --primary: var(--primary-blue);
+}
+
+[data-theme="light"] {
+  --bg-primary: var(--light-bg-primary);
+  --bg-secondary: var(--light-bg-secondary);
+  --text-primary: var(--light-text-primary);
+  --text-secondary: var(--light-text-secondary);
+  --primary: var(--primary-blue);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 100%;
+}
+
+img,
+svg,
+figure,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
