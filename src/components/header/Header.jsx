@@ -1,6 +1,11 @@
 import "./Header.css";
 
-function Header({ isDarkTheme, setIsDarkTheme }) {
+// Context import
+import { useAppContext } from "../AppProvider";
+
+function Header() {
+  const { isDarkTheme, setIsDarkTheme } = useAppContext();
+
   return (
     <header className="header wrapper">
       <h1 className="title">devfinder</h1>

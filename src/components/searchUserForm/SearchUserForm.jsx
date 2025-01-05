@@ -1,28 +1,10 @@
 import "./SearchUserForm.css";
 
-// React imports
-import { useState } from "react";
+// Context import
+import { useAppContext } from "../AppProvider";
 
 function SearchUserForm() {
-  const [username, setUsername] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const [errorMsg, setErrorMsg] = useState("");
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    setIsLoading(true);
-    setErrorMsg("");
-
-    try {
-      console.log(username.trim());
-    } catch (err) {
-      console.error(err);
-      setErrorMsg(err.message);
-    } finally {
-      setIsLoading(false);
-    }
-  };
+  const { handleSubmit, username, setUsername, isLoading } = useAppContext();
 
   return (
     <form onSubmit={handleSubmit} className="search-form | wrapper">

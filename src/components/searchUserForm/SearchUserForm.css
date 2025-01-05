@@ -1,4 +1,7 @@
 .search-form {
+  background-color: hsl(var(--bg-secondary));
+  border-radius: 1rem;
+
   position: relative;
 
   i {
@@ -27,7 +30,7 @@
     background-color: hsl(var(--bg-secondary));
     color: hsl(var(--text-primary));
     border: 2px solid transparent;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     padding: 1rem 1rem 1rem 2rem;
 
     transition: border-color 250ms ease-in-out;
@@ -38,6 +41,7 @@
     }
 
     &::placeholder {
+      color: hsl(var(--text-secondary));
       font-size: 0.8rem;
     }
 

@@ -1,17 +1,17 @@
-.app {
-  width: 100vw;
+.app-content {
+  width: 100%;
   min-height: 100vh;
   min-height: 100dvh;
-
   background-color: hsl(var(--bg-primary));
   color: hsl(var(--text-primary));
   font-family: var(--ff);
+  padding-block: 2rem 3rem;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
 
   /* For theme toggles */
   transition: 250ms ease-in-out;

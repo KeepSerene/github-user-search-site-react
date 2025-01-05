@@ -15,14 +15,14 @@
   /* Light theme */
   --light-bg-primary: 0 0% 94%; /* Light gray */
   --light-bg-secondary: 0 0% 100%; /* Pure white */
-  --light-bg-accent: 227 100% 93%; /* Soft blue */
+  --light-bg-accent: 227 100% 96%; /* Soft blue */
   --light-text-primary: 217 21% 21%; /* Navy blue */
   --light-text-secondary: 217 35% 45%; /* Muted blue */
 
   /* Dark theme */
   --dark-bg-primary: 220 40% 13%; /* Deep black */
   --dark-bg-secondary: 222 41% 20%; /* Charcoal gray */
-  --dark-bg-accent: 222 25% 27%; /* Dark slate gray */
+  --dark-bg-accent: 222 25% 12%; /* Dark slate gray */
   --dark-text-primary: 0 0% 100%; /* Pure white */
   --dark-text-secondary: 217 20% 51%; /* Cool gray */
 }
@@ -30,6 +30,7 @@
 [data-theme="dark"] {
   --bg-primary: var(--dark-bg-primary);
   --bg-secondary: var(--dark-bg-secondary);
+  --bg-accent: var(--dark-bg-accent);
   --text-primary: var(--dark-text-primary);
   --text-secondary: var(--dark-text-secondary);
   --primary: var(--primary-blue);
@@ -38,6 +39,7 @@
 [data-theme="light"] {
   --bg-primary: var(--light-bg-primary);
   --bg-secondary: var(--light-bg-secondary);
+  --bg-accent: var(--light-bg-accent);
   --text-primary: var(--light-text-primary);
   --text-secondary: var(--light-text-secondary);
   --primary: var(--primary-blue);
@@ -61,6 +63,7 @@ figure,
 picture {
   display: block;
   max-width: 100%;
+  object-fit: cover;
 }
 
 h1,
@@ -95,4 +98,23 @@ a {
 ul[role="list"],
 ol[role="list"] {
   list-style: none;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: hsl(var(--light-text-secondary));
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--primary-blue));
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsla(var(--primary-blue) / 0.7);
 }
