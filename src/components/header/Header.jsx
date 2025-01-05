@@ -8,7 +8,7 @@ function Header() {
 
   return (
     <header className="header wrapper">
-      <h1 className="title">devfinder</h1>
+      <h1 className="title">GitHubify</h1>
 
       <button
         type="button"

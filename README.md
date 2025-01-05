@@ -1,8 +1,144 @@
-# DevFinder
+# GitHubify 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Explore GitHub profiles with style and elegance
 
-Currently, two official plugins are available:
+GitHubify is a modern, responsive React application that transforms the way you explore GitHub profiles. With its sleek interface, theme customization, and real-time data fetching, GitHubify makes profile discovery a delightful experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![GitHubify Demo](./screenshots/demo.gif)
+
+## 🌟 Live Demo
+
+[Check out GitHubify in action](your-live-demo-url)
+
+## 📸 Screenshots
+
+<details>
+<summary>Click to view screenshots</summary>
+
+### Dark Theme
+
+![Dark Theme](./screenshots/dark-theme.png)
+
+### Light Theme
+
+![Light Theme](./screenshots/light-theme.png)
+
+### Mobile View
+
+![Mobile View](./screenshots/mobile-view.png)
+
+</details>
+
+## ✨ Features
+
+- **Real-time Profile Search**: Instantly fetch and display GitHub user profiles
+- **Theme Switching**: Seamlessly toggle between light and dark themes
+- **Responsive Design**: Optimized for mobile (320px), tablet (768px), and desktop (1024px+)
+- **Accessibility**: ARIA labels, semantic HTML, and keyboard navigation
+- **Error Handling**: Clear error messages for failed searches or API issues
+- **Local Storage**: Persists theme preference across sessions
+
+## 🛠️ Tech Stack
+
+- **React 18.3.1** - UI library
+- **React Context API** - State management
+- **GitHub REST API** - Profile data fetching
+- **CSS3** - Custom styling with CSS variables
+- **Vite 6.0.5** - Build tool and development server
+- **ESLint 9.17.0** - Code quality and consistency
+
+## 🚀 Getting Started
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/your-username/githubify.git
+```
+
+2. Install dependencies:
+
+```bash
+cd githubify
+npm install
+```
+
+3. Start the development server:
+
+```bash
+npm run dev
+```
+
+4. Open [http://localhost:5173](http://localhost:5173) in your browser
+
+## 🎨 Customization
+
+GitHubify uses CSS custom properties for easy theme customization:
+
+```css
+:root {
+  --primary: 212, 100%, 50%;
+  --bg-primary: 227, 100%, 98%;
+  --bg-secondary: 0, 0%, 100%;
+  --text-primary: 217, 21%, 21%;
+  --text-secondary: 217, 20%, 50%;
+}
+
+[data-theme="dark"] {
+  --bg-primary: 220, 40%, 13%;
+  --bg-secondary: 222, 41%, 20%;
+  --text-primary: 0, 0%, 100%;
+  --text-secondary: 0, 0%, 100%;
+}
+```
+
+## 📱 Responsive Breakpoints
+
+- Mobile: 320px - 767px
+- Tablet: 768px - 1023px
+- Desktop: 1024px and above
+
+## ♿ Accessibility Features
+
+- Semantic HTML structure
+- ARIA labels for interactive elements
+- Keyboard navigation support
+- High contrast color schemes
+- Screen reader friendly content
+
+## 🔍 API Usage
+
+GitHubify uses the GitHub Users API:
+
+```javascript
+GET https://api.github.com/users/{username}
+```
+
+Key data points retrieved:
+
+- Profile information
+- Repository count
+- Follower statistics
+- Social links
+- Join date
+
+## 👨‍💻 Author
+
+**[Your Name]**
+
+- GitHub: [@yourusername](https://github.com/yourusername)
+- Portfolio: [your-portfolio-url](your-portfolio-url)
+- Twitter: [@yourhandle](https://twitter.com/yourhandle)
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Design inspiration from [Frontend Mentor](https://www.frontendmentor.io)
+- Icons from Heroicons
+- GitHub API documentation and team
+
+---
+
+<p align="center">Made with ❤️ and React</p>
