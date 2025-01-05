@@ -70,22 +70,25 @@ npm run dev
 
 ## 🎨 Customization
 
-GitHubify uses CSS custom properties for easy theme customization:
+GitHubify uses CSS custom properties for easy theme customization. For example,
 
 ```css
 :root {
-  --primary: 212, 100%, 50%;
-  --bg-primary: 227, 100%, 98%;
-  --bg-secondary: 0, 0%, 100%;
-  --text-primary: 217, 21%, 21%;
-  --text-secondary: 217, 20%, 50%;
+  --primary-blue: 212 100% 50%;
+  --light-bg-primary: 0 0% 94%;
+  --light-bg-secondary: 0 0% 100%;
+  --light-bg-accent: 227 100% 96%;
+  --light-text-primary: 217 21% 21%;
+  --light-text-secondary: 217 35% 45%;
 }
 
 [data-theme="dark"] {
-  --bg-primary: 220, 40%, 13%;
-  --bg-secondary: 222, 41%, 20%;
-  --text-primary: 0, 0%, 100%;
-  --text-secondary: 0, 0%, 100%;
+  --bg-primary: var(--dark-bg-primary);
+  --bg-secondary: var(--dark-bg-secondary);
+  --bg-accent: var(--dark-bg-accent);
+  --text-primary: var(--dark-text-primary);
+  --text-secondary: var(--dark-text-secondary);
+  --primary: var(--primary-blue);
 }
 ```
 
