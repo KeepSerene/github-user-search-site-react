@@ -6,7 +6,7 @@ import { useAppContext } from "../AppProvider";
 // React import
 import { useEffect } from "react";
 
-// Helper import
+// Constant import
 import { STORAGE_KEY } from "../../utils/constants";
 
 // Component imports
