@@ -4,10 +4,11 @@ import "./SearchUserForm.css";
 import { useAppContext } from "../AppProvider";
 
 function SearchUserForm() {
-  const { handleSubmit, username, setUsername, isLoading } = useAppContext();
+  const { handleUsernameSubmit, username, setUsername, isLoading } =
+    useAppContext();
 
   return (
-    <form onSubmit={handleSubmit} className="search-form | wrapper">
+    <form onSubmit={handleUsernameSubmit} className="search-form | wrapper">
       <i>
         <svg
           xmlns="http://www.w3.org/2000/svg"

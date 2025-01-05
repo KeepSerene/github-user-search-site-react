@@ -1,55 +1,96 @@
 import "./UserProfile.css";
 
-// Helper import
-import { USER_SOCIAL_ICONS } from "../../utils/constants";
+// Constant imports
+import {
+  PROFILE_SOCIAL_ICONS,
+  PROFILE_STAT_LABELS,
+} from "../../utils/constants";
+
+// Context import
+import { useAppContext } from "../AppProvider";
 
 function UserProfile() {
+  const { errorMsg, userInfo } = useAppContext();
+
+  if (errorMsg) {
+    return <div className="wrapper | msg error">{errorMsg}</div>;
+  }
+
+  if (!userInfo) {
+    return (
+      <div className="wrapper | msg">
+        Search for a GitHub user by their username to view their profile
+        information here!
+      </div>
+    );
+  }
+
+  const statValues = [userInfo.repos, userInfo.followers, userInfo.following];
+
+  const socialInfo = [
+    userInfo.location,
+    userInfo.blog,
+    userInfo.twitter,
+    userInfo.company,
+  ];
+
   return (
     <div className="user-profile | wrapper">
       <div className="profile-header">
-        <img src="/reddit-avatar.png" alt="User avatar" className="avatar" />
+        <img
+          src={userInfo.avatarUrl}
+          alt={`${userInfo.username}'s avatar`}
+          className="avatar"
+        />
 
         <section className="profile-info">
-          <h2 className="username">The octocat</h2>
+          <h2 className="name">{userInfo.name}</h2>
 
-          <a href="#" className="mention">
-            @octocat
+          <a
+            href={`https://www.github.com/${userInfo.username}`}
+            target="_blank"
+            className="mention"
+          >
+            @{userInfo.username}
           </a>
 
-          <p className="user-join-date">Joined 25 jan 2011</p>
+          <p className="join-date">Joined on {userInfo.joinDate}</p>
         </section>
       </div>
 
       <div className="profile-body">
-        <p className="bio">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus
-          adipisci, nesciunt illo ipsum laboriosam mollitia?
-        </p>
+        <p className="bio">{userInfo.bio}</p>
 
-        <div className="profile-stats">
-          <div className="profile-stat">
-            <p className="stat-label">Repos</p>
-            <p className="stat-value">8</p>
-          </div>
+        <ul role="list" className="profile-stats">
+          {PROFILE_STAT_LABELS.map((statLabel, index) => (
+            <li key={index} className="profile-stat">
+              <span className="stat-label">{statLabel}</span>
 
-          <div className="profile-stat">
-            <p className="stat-label">Followers</p>
-            <p className="stat-value">6195</p>
-          </div>
-
-          <div className="profile-stat">
-            <p className="stat-label">Following</p>
-            <p className="stat-value">9</p>
-          </div>
-        </div>
+              <span className="stat-value">{statValues[index]}</span>
+            </li>
+          ))}
+        </ul>
       </div>
 
       <ul role="list" className="profile-socials">
-        {USER_SOCIAL_ICONS.map((icon, index) => (
-          <li key={index} className={`profile-social | social${index + 1}`}>
-            {icon}
+        {PROFILE_SOCIAL_ICONS.map((socialIcon, index) => (
+          <li
+            key={index}
+            style={{
+              color: socialInfo[index]
+                ? ""
+                : "hsla(var(--text-secondary) / 0.5)",
+            }}
+            className={`profile-social | social${index + 1}`}
+          >
+            {socialIcon}
 
-            <span className="social-info">Hello</span>
+            <span
+              style={{ textTransform: index === 0 ? "capitalize" : "" }}
+              className="social-info"
+            >
+              {socialInfo[index] ? socialInfo[index] : "Not Available"}
+            </span>
           </li>
         ))}
       </ul>

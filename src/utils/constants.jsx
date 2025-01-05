@@ -1,6 +1,8 @@
 const STORAGE_KEY = "isDevFinderThemeDark";
 
-const USER_SOCIAL_ICONS = [
+const PROFILE_STAT_LABELS = ["repos", "followers", "following"];
+
+const PROFILE_SOCIAL_ICONS = [
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -28,7 +30,7 @@ const USER_SOCIAL_ICONS = [
     viewBox="0 0 24 24"
     strokeWidth={1.5}
     stroke="currentColor"
-    aria-label="Blog attachment"
+    aria-label="Blog site"
     className="icon"
   >
     <path
@@ -56,7 +58,7 @@ const USER_SOCIAL_ICONS = [
     viewBox="0 0 24 24"
     strokeWidth={1.5}
     stroke="currentColor"
-    aria-label="GitHub"
+    aria-label="company"
     className="icon"
   >
     <path
@@ -67,4 +69,4 @@ const USER_SOCIAL_ICONS = [
   </svg>,
 ];
 
-export { STORAGE_KEY, USER_SOCIAL_ICONS };
+export { STORAGE_KEY, PROFILE_SOCIAL_ICONS, PROFILE_STAT_LABELS };
