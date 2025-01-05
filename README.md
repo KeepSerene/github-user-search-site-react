@@ -4,11 +4,9 @@
 
 GitHubify is a modern, responsive React application that transforms the way you explore GitHub profiles. With its sleek interface, theme customization, and real-time data fetching, GitHubify makes profile discovery a delightful experience.
 
-![GitHubify Demo](./screenshots/demo.gif)
-
 ## 🌟 Live Demo
 
-[Check out GitHubify in action](your-live-demo-url)
+[Check out GitHubify in action](https://githubify-five.vercel.app/)
 
 ## 📸 Screenshots
 
@@ -17,15 +15,15 @@ GitHubify is a modern, responsive React application that transforms the way you 
 
 ### Dark Theme
 
-![Dark Theme](./screenshots/dark-theme.png)
+![Dark Theme](./public/githubify-dark-theme.png)
 
 ### Light Theme
 
-![Light Theme](./screenshots/light-theme.png)
+![Light Theme](./public/githubify-light-theme.png)
 
 ### Mobile View
 
-![Mobile View](./screenshots/mobile-view.png)
+![Mobile View](./public/githubify-mobile-view.png)
 
 </details>
 
@@ -52,7 +50,7 @@ GitHubify is a modern, responsive React application that transforms the way you 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/githubify.git
+git clone https://github.com/KeepSerene/github-user-search-site-react.git
 ```
 
 2. Install dependencies:
@@ -123,11 +121,11 @@ Key data points retrieved:
 
 ## 👨‍💻 Author
 
-**[Your Name]**
+**[Dhrubajyoti Bhattacharjee]**
 
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Portfolio: [your-portfolio-url](your-portfolio-url)
-- Twitter: [@yourhandle](https://twitter.com/yourhandle)
+- GitHub: [@KeepSerene](https://github.com/KeepSerene)
+- Portfolio: [MathToDev](https://math-to-dev.vercel.app/)
+- Twitter: [@UsualLearner](https://x.com/UsualLearner)
 
 ## 📄 License
 
