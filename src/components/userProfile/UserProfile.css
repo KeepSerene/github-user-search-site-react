@@ -161,14 +161,14 @@
       grid-template-rows: repeat(2, 1fr);
       grid-template-areas:
         "location twitter"
-        "blogAttachment gitHub";
+        "blog company";
 
       .social1 {
         grid-area: location;
       }
 
       .social2 {
-        grid-area: blogAttachment;
+        grid-area: blog;
       }
 
       .social3 {
@@ -176,7 +176,7 @@
       }
 
       .social4 {
-        grid-area: gitHub;
+        grid-area: company;
       }
     }
 
