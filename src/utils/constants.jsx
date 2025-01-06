@@ -1,4 +1,4 @@
-const STORAGE_KEY = "isDevFinderThemeDark";
+const STORAGE_KEY = "isDarkTheme";
 
 const PROFILE_STAT_LABELS = ["repos", "followers", "following"];
 

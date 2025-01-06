@@ -19,6 +19,7 @@
     color: hsl(var(--text-secondary));
     font-size: 1rem;
     font-weight: var(--fw-bold);
+    text-transform: capitalize;
     border: none;
 
     display: flex;
